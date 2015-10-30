@@ -3,4 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- twitter api key -->
+    <string name="twitter_key">BVKqlwY3gBlrRZrFuPkpIig46</string>
+    <string name="twitter_secret">F48RDNaeLtqeLoxDwOHIB83kZclJAMla65QX5hQAOt5dwtpxcG</string>
 </resources>
