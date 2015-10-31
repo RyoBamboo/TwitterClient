@@ -6,19 +6,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ryobamboo.twitterclient.R;
+import com.ryobamboo.twitterclient.cores.AppAuthenticator;
+import com.ryobamboo.twitterclient.cores.Injector;
+
+import javax.inject.Inject;
 
 public class MainActivity extends ActionBarActivity {
+
+    @Inject
+    AppAuthenticator mAppAuthenticator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setup();
-    }
-
-    private void setup() {
-
+        Injector.inject(this);
     }
 
     @Override
