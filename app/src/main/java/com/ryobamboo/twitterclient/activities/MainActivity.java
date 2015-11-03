@@ -22,6 +22,11 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         Injector.inject(this);
+        setup();
+    }
+
+    public void setup() {
+
     }
 
     @Override
