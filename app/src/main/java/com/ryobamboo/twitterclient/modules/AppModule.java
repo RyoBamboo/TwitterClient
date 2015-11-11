@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.ryobamboo.twitterclient.AppApplication;
 import com.ryobamboo.twitterclient.activities.MainActivity;
+import com.ryobamboo.twitterclient.activities.TwitterAuthenticationActivity;
 import com.ryobamboo.twitterclient.cores.AppAuthenticator;
 
 import javax.inject.Singleton;
@@ -16,7 +17,8 @@ import dagger.Provides;
         library = true,
         injects = {
                 AppApplication.class,
-                MainActivity.class
+                MainActivity.class,
+                TwitterAuthenticationActivity.class
         }
 )
 

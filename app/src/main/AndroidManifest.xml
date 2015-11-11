@@ -22,11 +22,13 @@
             android:name=".activities.MainActivity"
             android:label="@string/app_name" >
         </activity>
+
+        <activity
+            android:name=".activities.TwitterAuthenticationActivity"
+            android:label="@string/app_name" >
+        </activity>
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="2578cc5e04e7497975623c42b2e738218e3e2d63" />
-        <meta-data
-           android:name="io.fabric.ApiKey"
             android:value="2578cc5e04e7497975623c42b2e738218e3e2d63" />
     </application>
 
