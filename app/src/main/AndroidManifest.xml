@@ -3,6 +3,7 @@
     package="com.ryobamboo.twitterclient" >
 
     <application
+        android:name=".AppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,9 +19,18 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" >
         </activity>
+
+        <activity
+            android:name=".activities.TwitterAuthenticationActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2578cc5e04e7497975623c42b2e738218e3e2d63" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

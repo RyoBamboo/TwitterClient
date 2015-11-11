@@ -1,16 +1,37 @@
-package com.ryobamboo.twitterclient;
+package com.ryobamboo.twitterclient.activities;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ryobamboo.twitterclient.R;
+import com.ryobamboo.twitterclient.cores.AppAuthenticator;
+import com.ryobamboo.twitterclient.cores.Injector;
+import com.twitter.sdk.android.Twitter;
+
+import javax.inject.Inject;
+
 public class MainActivity extends ActionBarActivity {
+
+    @Inject
+    AppAuthenticator mAppAuthenticator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Injector.inject(this);
+        setup();
+    }
+
+    public void setup() {
+        if (!mAppAuthenticator.hasAuthentication()) {
+            Intent intent = new Intent(MainActivity.this, TwitterAuthenticationActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override
